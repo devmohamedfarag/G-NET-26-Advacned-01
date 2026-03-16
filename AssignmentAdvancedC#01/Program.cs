@@ -146,3 +146,28 @@ public class ValueContainer<T> where T : struct
         Console.WriteLine(Data);
     }}*/
 #endregion
+
+#region Question09
+// Q9: What is the 'new()' constraint? Write an example.
+
+// Answer: The new() constraint in generics means that the type parameter must have a public parameterless constructor.
+//         This allows the generic class or method to create an object of type T using new.
+
+/*
+ public class Student
+{
+    public string Name { get; set; }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Factory<Student> factory = new Factory<Student>();
+        Student s = factory.Create();
+
+        Console.WriteLine("Object Created");
+    }
+}
+ */
+#endregion
