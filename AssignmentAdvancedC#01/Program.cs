@@ -315,3 +315,11 @@ public class SafeList<T>
 // The 'in' keyword is used to declare a type parameter as contravariant.
 // It means that the type parameter can only be used in input positions (e.g., method parameters) and not in output positions (e.g., return types)
 #endregion
+
+#region Question17
+// Q17: What is the difference between covariance and contravariance?
+
+// Answer: Covariance allows a generic type to preserve the inheritance relationship for output types (e.g., return types),
+//         while contravariance allows a generic type to accept less derived types for input types (e.g., method parameters).
+            
+#endregion
