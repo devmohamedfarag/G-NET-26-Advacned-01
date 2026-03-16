@@ -124,3 +124,25 @@ public class ValueContainer<T> where T : struct
     }}
  */
 #endregion
+
+#region Question08
+// Q8: What is the 'class' constraint? Write an example.
+
+// Answer: The class constraint in generics means that the type parameter must be a reference type.
+//         So the generic type T can only be: string, object, any class, arrays, interfaces
+//         It cannot be a value type like int, double, or bool.
+
+/* public class ReferenceContainer<T> where T : class
+ {
+    public T Data { get; set; }
+
+    public ReferenceContainer(T data)
+    {
+        Data = data;
+    }
+
+    public void Display()
+    {
+        Console.WriteLine(Data);
+    }}*/
+#endregion
