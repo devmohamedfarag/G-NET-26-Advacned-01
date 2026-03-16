@@ -171,3 +171,23 @@ class Program
 }
  */
 #endregion
+
+#region Question10
+// Q10:  What is the interface constraint? Write an example.
+
+// Answer: The interface constraint in generics means that the type parameter must implement a specific interface.
+//         This allows the generic class or method to call the interface methods safely on the type parameter.
+
+/*
+ public interface IPrintable
+{
+    void Print();
+}
+
+public class Printer<T> where T : IPrintable
+{
+    public void Show(T item)
+    {
+        item.Print();
+    }}*/
+#endregion
