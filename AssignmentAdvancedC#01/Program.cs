@@ -26,3 +26,27 @@ public class Container<T>
     }
 }*/
 #endregion
+
+#region Qusetion03
+// Q3:What are multiple type parameters? Write Pair<TKey, TValue>
+
+// Answer: Multiple type parameters allow you to define a generic class or method that can work with more than one type.
+/*
+ public class Pair<TKey, TValue>
+{
+    public TKey Key { get; set; }
+    public TValue Value { get; set; }
+
+    public Pair(TKey key, TValue value)
+    {
+        Key = key;
+        Value = value;
+    }
+
+    public void Display()
+    {
+        Console.WriteLine($"Key: {Key}, Value: {Value}");
+    }
+}
+ */
+#endregion
