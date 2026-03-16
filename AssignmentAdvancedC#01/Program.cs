@@ -250,3 +250,23 @@ public class MultiConstraint<T> where T : BaseClass, IExample, new()
 }
 */
 #endregion
+
+#region Question13
+// Q13: What does the 'default' keyword do in generics?
+
+// Answer: The 'default' keyword in generics is used to return the default value of a type parameter.
+//         For reference types, the default value is null.
+//         For value types, the default value is the zero-initialized value (e.g., 0 for int, false for bool).
+//         This is very useful in generic methods or classes, where the type T is unknown at compile time.
+
+/* Example:
+ 
+public class Utility
+{
+    public static T GetDefault<T>()
+    {
+        return default(T);
+    }
+}
+ */
+#endregion
