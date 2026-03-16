@@ -321,5 +321,12 @@ public class SafeList<T>
 
 // Answer: Covariance allows a generic type to preserve the inheritance relationship for output types (e.g., return types),
 //         while contravariance allows a generic type to accept less derived types for input types (e.g., method parameters).
-            
+
+#endregion
+
+#region Question18
+// Q18: How do static members work in generic types?
+
+// Answer: Static members in generic types are shared across all instances of the generic type, regardless of the type parameter.
+//         Each closed constructed type (e.g., Container<int>, Container<string>) has its own static members.
 #endregion
