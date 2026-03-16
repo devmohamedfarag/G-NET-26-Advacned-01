@@ -330,3 +330,24 @@ public class SafeList<T>
 // Answer: Static members in generic types are shared across all instances of the generic type, regardless of the type parameter.
 //         Each closed constructed type (e.g., Container<int>, Container<string>) has its own static members.
 #endregion
+
+#region Question19
+// Q19: How can you inherit from a generic class?
+
+// Answer: You can inherit from a generic class by specifying the type parameter in the derived class.
+/*
+ 
+public class BaseClass<T>
+{
+    public T Data { get; set; }
+}
+
+public class DerivedClass : BaseClass
+{
+    public void Display()
+    {
+        Console.WriteLine(Data);
+    }
+}
+*/
+#endregion
