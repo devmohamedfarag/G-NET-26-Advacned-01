@@ -351,3 +351,77 @@ public class DerivedClass : BaseClass
 }
 */
 #endregion
+
+#region Question20
+// Q20: Complete Exercise - Create a generic Cache<TKey, TValue>with Add, Get, Remove, Contains, and expiration support.
+
+// Answer: 
+/*
+ using System;
+using System.Collections.Generic;
+
+public class CacheItem<TValue>
+{
+    public TValue Value { get; set; }
+    public DateTime Expiration { get; set; }
+}
+
+public class Cache<TKey, TValue>
+{
+    private Dictionary<TKey, CacheItem<TValue>> cache = new Dictionary<TKey, CacheItem<TValue>>();
+
+    // Add an item with optional expiration
+    public void Add(TKey key, TValue value, TimeSpan? duration = null)
+    {
+        DateTime expiration = duration.HasValue ? DateTime.Now.Add(duration.Value) : DateTime.MaxValue;
+        cache[key] = new CacheItem<TValue> { Value = value, Expiration = expiration };
+    }
+
+    // Get an item
+    public TValue Get(TKey key)
+    {
+        if (cache.ContainsKey(key))
+        {
+            var item = cache[key];
+            if (DateTime.Now <= item.Expiration)
+                return item.Value;
+            else
+            {
+                // Expired
+                cache.Remove(key);
+            }
+        }
+        return default(TValue); // Return default if not found or expired
+    }
+
+    // Remove an item
+    public bool Remove(TKey key)
+    {
+        return cache.Remove(key);
+    }
+
+    // Check if item exists and is not expired
+    public bool Contains(TKey key)
+    {
+        if (cache.ContainsKey(key))
+        {
+            var item = cache[key];
+            if (DateTime.Now <= item.Expiration)
+                return true;
+            else
+            {
+                cache.Remove(key); // Remove expired
+            }
+        }
+        return false;
+    }
+
+    // Clear all items
+    public void Clear()
+    {
+        cache.Clear();
+    }
+}*/
+
+
+#endregion
