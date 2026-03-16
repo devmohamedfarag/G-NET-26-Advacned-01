@@ -213,3 +213,40 @@ public class AnimalHandler<T> where T : Animal
     }
 }*/
 #endregion
+
+#region Question12
+// Q12: How do you apply multiple constraints? Write an example. 
+
+// Answer: In C#, you can apply multiple constraints to a generic type parameter by separating them with commas:
+//         * struct => must be a value type
+//         * class => must be a reference type
+//         * InterfaceName => must implement an interface
+//         * BaseClassName => must inherit from a base class
+//         * new() => must have a parameterless constructor
+
+/* Example:
+ 
+public class BaseClass
+{
+    public void BaseMethod()
+    {
+        Console.WriteLine("Base method");
+    }
+}
+
+public interface IExample
+{
+    void ExampleMethod();
+}
+
+public class MultiConstraint<T> where T : BaseClass, IExample, new()
+{
+    public void UseT()
+    {
+        T instance = new T(); // Can create instance because of new() constraint
+        instance.BaseMethod(); // Can call base class method
+        instance.ExampleMethod(); // Can call interface method
+    }
+}
+*/
+#endregion
