@@ -1,4 +1,4 @@
-﻿#region Qusetion01
+﻿#region Quesion01
 // Q1: What is a generic class? Why use generics?
 
 // Answer: A generic class is a class that can work with any data type.
@@ -6,7 +6,7 @@
 //         Generics provide type safety, code reusability, and performance benefits by allowing you to define a class or method with a placeholder for the type it operates on.
 #endregion
 
-#region Qusetion02
+#region Quesion02
 // Q2: Write a generic class Container<T> with Add and Get methods.
 
 // Answer:
@@ -27,7 +27,7 @@ public class Container<T>
 }*/
 #endregion
 
-#region Qusetion03
+#region Quesion03
 // Q3:What are multiple type parameters? Write Pair<TKey, TValue>
 
 // Answer: Multiple type parameters allow you to define a generic class or method that can work with more than one type.
@@ -51,7 +51,7 @@ public class Container<T>
  */
 #endregion
 
-#region Qusrtion04
+#region Quesion04
 // Q4: What is a generic method? Write Swap<T> method.
 
 // Answer: A generic method is a method that can operate on any data type.
@@ -65,6 +65,21 @@ public class Utility
         T temp = a;
         a = b;
         b = temp;
+    }
+}
+*/
+#endregion
+
+#region Quesion05
+// Q5: Write a generic method FindMax<T> that finds maximum value
+
+// Answer
+/*
+public class Utility
+{
+    public static T FindMax<T>(T a, T b) where T : IComparable<T>
+    {
+        return a.CompareTo(b) > 0 ? a : b;
     }
 }
 */
