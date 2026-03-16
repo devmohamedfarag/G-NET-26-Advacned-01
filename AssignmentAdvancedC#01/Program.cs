@@ -191,3 +191,25 @@ public class Printer<T> where T : IPrintable
         item.Print();
     }}*/
 #endregion
+
+#region Question11
+// Q11: What is the base class constraint? Write an example.
+
+// Answer: The base class constraint in generics means that the type parameter must inherit from a specific base class.
+//         This allows the generic class or method to safely use members of that base class on the type parameter.
+
+/* Example:
+ public class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine("Eating...");
+    }
+public class AnimalHandler<T> where T : Animal
+{
+    public void Feed(T animal)
+    {
+        animal.Eat(); // Safe because T is guaranteed to be Animal or derived
+    }
+}*/
+#endregion
