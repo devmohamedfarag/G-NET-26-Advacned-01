@@ -293,3 +293,14 @@ public class SafeList<T>
     }
 }*/
 #endregion
+
+#region Question15
+// Q15: What is covariance? Explain the 'out' keyword.
+
+// Answer: Covariance allows a generic type to preserve inheritance relationships.
+//         If Derived inherits from Base, covariance allows IEnumerable<Derived> to be used where IEnumerable<Base> is expected.
+//         It only works for output (return) positions—you can read, but not write to the collection.
+
+// The 'out' keyword is used to declare a type parameter as covariant.
+// It means that the type parameter can only be used in output positions (e.g., return types) and not in input positions (e.g., method parameters).
+#endregion
