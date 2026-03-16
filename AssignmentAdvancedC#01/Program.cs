@@ -100,3 +100,27 @@ public interface IRepository<T>
 }
 */
 #endregion
+
+#region Question07
+// Q7: What is the 'struct' constraint? Write an example.
+
+// Answer: The struct constraint in generics means that the type parameter must be a value type (a structure).
+//         So the generic type T can only be used with types like: int, double, bool, DateTime, any custom struct
+//         It cannot be used with reference types like string, class, or object.
+
+/* 
+public class ValueContainer<T> where T : struct
+{
+ public T Value { get; set; }
+
+    public ValueContainer(T value)
+    {
+        Value = value;
+    }
+
+    public void Display()
+    {
+        Console.WriteLine(Value);
+    }}
+ */
+#endregion
