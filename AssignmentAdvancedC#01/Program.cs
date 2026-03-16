@@ -304,3 +304,14 @@ public class SafeList<T>
 // The 'out' keyword is used to declare a type parameter as covariant.
 // It means that the type parameter can only be used in output positions (e.g., return types) and not in input positions (e.g., method parameters).
 #endregion
+
+#region Question16
+// Q16: What is contravariance? Explain the 'in' keyword.
+
+// Answer: Contravariance is the opposite of covariance. It allows a generic type to accept less derived types.
+//         If Dog inherits from Animal, contravariance allows IComparer<Animal> to be assigned to IComparer<Dog>.
+//         It only works for input (parameter) positions—you can pass values into methods, but not return them
+
+// The 'in' keyword is used to declare a type parameter as contravariant.
+// It means that the type parameter can only be used in input positions (e.g., method parameters) and not in output positions (e.g., return types)
+#endregion
